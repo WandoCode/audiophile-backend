@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "headphones",
+        "speakers",
+        "earphones"
+      ]
+    },
+    "new": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0,
+      "required": true
+    },
+    "features": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "gallery": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.gallery"
+    },
+    "categoryImage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.gallery-item"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.gallery-item"
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
+    },
+    "includes": {
+      "type": "json"
+    },
+    "others": {
+      "type": "json"
+    },
+    "other": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

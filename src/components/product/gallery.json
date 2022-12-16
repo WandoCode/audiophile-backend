@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_product_galleries",
+  "info": {
+    "displayName": "gallery",
+    "icon": "images"
+  },
+  "options": {},
+  "attributes": {
+    "first": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.gallery-item"
+    },
+    "second": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.gallery-item"
+    },
+    "third": {
+      "type": "component",
+      "repeatable": true,
+      "component": "gallery.gallery-item"
+    }
+  }
+}
