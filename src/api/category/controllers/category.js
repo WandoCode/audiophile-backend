@@ -13,6 +13,11 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
     const entity = await strapi.db.query("api::product.product").findMany({
       select: ["name", "new", "description", "slug"],
       where: { category: `${category}` },
+      populate: [
+        "categoryImage.desktop",
+        "categoryImage.tablet",
+        "categoryImage.mobile",
+      ],
     });
 
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
