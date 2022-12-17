@@ -4,7 +4,7 @@ module.exports = {
       // Path defined with an URL parameter
       method: "GET",
       path: "/category/:category",
-      handler: "category.index",
+      handler: "category.find",
     },
   ],
 };
