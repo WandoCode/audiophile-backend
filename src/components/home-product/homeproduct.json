@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_home_product_homeproducts",
+  "info": {
+    "displayName": "homeproduct",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "gallery.gallery-item"
+    },
+    "new": {
+      "type": "boolean"
+    }
+  }
+}
