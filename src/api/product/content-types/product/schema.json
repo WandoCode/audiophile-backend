@@ -62,12 +62,19 @@
       "type": "json"
     },
     "others": {
-      "type": "json"
-    },
-    "other": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product.product"
+    },
+    "shared": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

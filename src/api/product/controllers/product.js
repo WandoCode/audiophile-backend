@@ -8,11 +8,10 @@ const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::product.product", ({ strapi }) => ({
   async findOne(ctx) {
-    const { id } = ctx.params;
-    const { query } = ctx;
+    const { slug } = ctx.params;
 
-    const entity = await strapi.service("api::product.product").findOne(id, {
-      ...query,
+    const entity = await strapi.db.query("api::product.product").findOne({
+      where: { slug },
       populate: [
         "image.desktop",
         "image.tablet",
@@ -29,9 +28,12 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
         "categoryImage.mobile",
         "categoryImage.tablet",
         "categoryImage.desktop",
+        "others.shared",
       ],
     });
+
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
+
     return this.transformResponse(sanitizedEntity);
   },
 }));
