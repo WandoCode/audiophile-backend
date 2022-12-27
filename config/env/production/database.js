@@ -1,13 +1,9 @@
 module.exports = ({ env }) => ({
   connection: {
-    client: "mysql",
+    client: "sqlite",
     connection: {
-      host: env("MYSQLHOST", "127.0.0.1"),
-      port: env.int("MYSQLPORT", 5931),
-      database: env("MYSQLDATABASE", "railway"),
-      user: env("MYSQLUSER", "postgres"),
-      password: env("MYSQLPASSWORD", "password"),
-      ssl: env.bool(true),
+      filename: path.join(__dirname, "..", ".tmp/data.db"),
     },
+    useNullAsDefault: true,
   },
 });
