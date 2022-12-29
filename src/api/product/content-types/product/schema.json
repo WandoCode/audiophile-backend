@@ -67,14 +67,9 @@
       "target": "api::product.product"
     },
     "shared": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      "type": "component",
+      "repeatable": false,
+      "component": "gallery.gallery-item"
     }
   }
 }
