@@ -31,6 +31,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
         "others.shared.mobile",
         "others.shared.tablet",
         "others.shared.desktop",
+        "cartImage",
       ],
     });
 
