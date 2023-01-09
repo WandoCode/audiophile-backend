@@ -36,7 +36,6 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
     });
 
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
-
     return this.transformResponse(sanitizedEntity);
   },
 }));
