@@ -84,6 +84,9 @@
     },
     "shortName": {
       "type": "string"
+    },
+    "test": {
+      "type": "string"
     }
   }
 }
