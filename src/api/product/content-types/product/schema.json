@@ -72,14 +72,18 @@
       "component": "gallery.gallery-item"
     },
     "cartImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "shortName": {
+      "type": "string"
     }
   }
 }
