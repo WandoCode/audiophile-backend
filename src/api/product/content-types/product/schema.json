@@ -18,11 +18,7 @@
     },
     "category": {
       "type": "enumeration",
-      "enum": [
-        "headphones",
-        "speakers",
-        "earphones"
-      ]
+      "enum": ["headphones", "speakers", "earphones"]
     },
     "new": {
       "type": "boolean"
@@ -75,17 +71,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "shortName": {
-      "type": "string"
-    },
-    "test": {
       "type": "string"
     }
   }
