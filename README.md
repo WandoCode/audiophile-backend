@@ -1,57 +1,47 @@
-# 🚀 Getting started with Strapi
+# Audiophile
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+This repo contains the code for the backend of the [audiophile website](https://wandocode.github.io/audiophile-frontend/#/audiophile-frontend/).
+The goal of this website is mainly to show off some of my web development skills.
 
-### `develop`
+## Frontend
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+The Frontend for this project can be found on this repo: [audiophile-backend](https://github.com/WandoCode/audiophile-frontend).
 
-```
-npm run develop
-# or
-yarn develop
-```
+It's build with React and with a Storybook.
 
-### `start`
+## Hightlighted skills in this project
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+- Use of a headless CMS to create an API
+- Custom routes and controllers.
+- Use of Cloudinary and a postrgesql database for data persistence.
+- Deployment on a cloud application plateform.
 
-```
-npm run start
-# or
-yarn start
-```
+# How to install
 
-### `build`
+## Prerequisites
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+- nodeJS v16.14.2 or better
 
-```
-npm run build
-# or
-yarn build
-```
+## Setup
 
-## ⚙️ Deployment
+NB: don't forget [the frontend](https://github.com/WandoCode/audiophile-frontend)
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+- Run `npm install`
+- For production, create a postgresql database.
+- Create and fill a '.env' file (or '.env.production' for production) with the keys given in the '.env.example' file)
+- Launch the development environement with `npm run development` (`npm run start` for production)
+- Populate the database with your content.
 
-## 📚 Learn more
+# Scripts
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+## `develop`
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+Start your Strapi application with autoReload enabled.
 
-## ✨ Community
+## `start`
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+Start your Strapi application with autoReload disabled.
 
----
+## `build`
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Build your admin panel.
