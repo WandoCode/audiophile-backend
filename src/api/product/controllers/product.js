@@ -38,4 +38,14 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
     const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
     return this.transformResponse(sanitizedEntity);
   },
+  async findAll(ctx) {
+    const entries = await strapi.entityService.findMany(
+      "api::product.product",
+      {
+        fields: ["slug"],
+      }
+    );
+
+    return entries;
+  },
 }));
