@@ -24,4 +24,14 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
 
     return this.transformResponse(sanitizedEntity);
   },
+  async findNames(ctx) {
+    const entries = await strapi.entityService.findMany(
+      "api::layout-data.layout-data",
+      {
+        fields: ["category1", "category2", "category3"],
+      }
+    );
+
+    return entries;
+  },
 }));
