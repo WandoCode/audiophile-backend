@@ -10,5 +10,10 @@ module.exports = {
       path: "/products/product/:slug",
       handler: "product.findOne",
     },
+    {
+      method: "POST",
+      path: "/products/prices",
+      handler: "product.findPrices",
+    },
   ],
 };

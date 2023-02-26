@@ -48,4 +48,16 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
 
     return entries;
   },
+  async findPrices(ctx) {
+    const itemsSlug = ctx.request.body;
+
+    const entries = await strapi.db.query("api::product.product").findMany({
+      where: {
+        slug: { $in: itemsSlug },
+      },
+      select: ["slug", "price"],
+    });
+
+    return entries;
+  },
 }));
