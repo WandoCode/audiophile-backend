@@ -14,7 +14,14 @@ module.exports = [
       },
     },
   },
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      header: "*",
+      origin: ["https://audiophile-frontend-eta.vercel.app"],
+    },
+  },
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
