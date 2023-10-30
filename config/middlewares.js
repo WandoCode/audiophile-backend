@@ -18,7 +18,7 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      header: "*",
+      headers: "*",
       origin: ["https://audiophile-frontend-eta.vercel.app"],
     },
   },
