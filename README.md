@@ -20,7 +20,7 @@ It's build with React and with a Storybook.
 
 ## Prerequisites
 
-- nodeJS v16.14.2 or better
+- nodeJS v16 _only_
 
 ## Setup
 
